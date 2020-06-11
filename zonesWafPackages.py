@@ -70,7 +70,7 @@ def getZoneWafPackageDetails(zone_id,package_id,package_name):
     cf = CloudFlare.CloudFlare()
 
     try:
-        rules = cf.zones.firewall.waf.packages.groups.get(zone_id, package_id, params=params)
+        rules = cf.zones.firewall.waf.packages.groups.get(zone_id, package_id)
         print('***************************')
         print('package_name: '+package_name)
         print('***************************')
